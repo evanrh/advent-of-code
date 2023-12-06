@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs"
+import { reduction_sum } from "../shared_functions.mjs";
 
 const number_mappings = {
   one: 1,
@@ -32,9 +33,6 @@ function get_textual_number(line = "") {
 
 }
 
-function reduction_sum(acc, cur) {
-  return acc + cur;
-}
 const data = readFileSync("./input", "utf-8");
 const lines = data.split("\n");
 

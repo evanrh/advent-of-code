@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+import { reduction_sum } from "../shared_functions.mjs";
 
 function get_game_config(game = "") {
   const [
@@ -82,7 +83,7 @@ const results = {
     }, 0),
   part_2: games
     .map(i => least_possible_cubes(i))
-    .reduce((acc, cur) => acc + cur, 0),
+    .reduce(reduction_sum, 0),
 };
 
 console.log(results);

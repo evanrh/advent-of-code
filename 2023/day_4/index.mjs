@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+import { reduction_sum } from "../shared_functions.mjs";
 
 function setup_numbers(card = "") {
   const [
@@ -52,10 +53,6 @@ function reduce_wins(acc, card = "", index = 0) {
   }
 
   return acc;
-}
-
-function reduction_sum(acc, cur) {
-  return acc + cur;
 }
 
 const data = readFileSync("./input", "utf-8");
